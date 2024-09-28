@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'libreFranklin';
+  src: url('../public/fonts/LibreFranklin-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'arvo-regular';
+  src: url('../public/fonts/Arvo-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'arvo-bold';
+  src: url('../public/fonts/Arvo-Bold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'noto-semiBold';
+  src: url('../public/fonts/NotoSemiBold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'noto-bold';
+  src: url('../public/fonts/NotoBold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'noto-serif-semiBoldItalic';
+  src: url('../public/fonts/NotoSerifSemiBoldItalic.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'marmelad-regular';
+  src: url('../public/fonts/Marmelad-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'reggaeone-regular';
+  src: url('../public/fonts/ReggaeOne-Regular.otf') format('opentype');
+  font-weight : normal;
+  font-style: normal;
+}
