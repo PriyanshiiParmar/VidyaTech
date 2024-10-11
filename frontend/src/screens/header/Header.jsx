@@ -13,12 +13,12 @@ import {
 const Screens = [
     { screen: 'home', title: 'Home', navigate: "/" },
     { screen: 'about', title: 'About', navigate : "/about" },
-    { screen: 'service', title: 'Service' },
-    { screen: 'career', title: 'Career' },
+    { screen: 'services', title: 'Service', navigate : "/services" },
+    { screen: 'career', title: 'Career', navigate:"/career" },
   ];
 const Header = () => {
     const navigate = useNavigate();
-  return (
+  return (  
     <Box>
       <Flex
         bg={'red'}
