@@ -1,20 +1,13 @@
-import Footer from '../footer/Footer';
-import Header from '../header/Header';
+import Footer from './Footer';
+import Header from './Header';
 import {
   Box,
-  Center,
-  color,
   Flex,
-  Grid,
-  Heading,
   Input,
   Image,
   FormControl,
   FormLabel,
-  FormErrorMessage,
-  FormHelperText,
   Text,
-  useBreakpointValue,
   Textarea,
 } from '@chakra-ui/react';
 
@@ -45,7 +38,7 @@ const Career = () => {
         <Image
           height={{xl:560, base:300}}
           width={{xl:700, base:300}}
-          src={require('../../images/careerImg (1).png')}
+          src={require('../images/careerImg (1).png')}
         />
       </Flex>
       </Box>
@@ -53,7 +46,7 @@ const Career = () => {
         marginTop={{xl:-20}}
         marginLeft={10}
         height={70}
-        src={require('../../images/starImg.png')}
+        src={require('../images/starImg.png')}
       />
       <Box  background={
         'conic-gradient(from 35.64deg at -31.94% 88.73%, #F8F8F8 0deg, #F9F9F9 0.04deg, #786779 45deg, #EDCFED 66.73deg, #CBA9A9 75.6deg, #FFD1D1 75.64deg, #EFFFFF 140.4deg, #F9F9F9 310.43deg, #F8F8F8 360deg)'

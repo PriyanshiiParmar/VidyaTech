@@ -1,46 +1,49 @@
-import Footer from '../footer/Footer';
-import Header from '../header/Header';
-import {
-  Box,
-  Center,
-  color,
-  Flex,
-  Grid,
-  Heading,
-  Image,
-  Text,
-  useBreakpointValue,
-} from '@chakra-ui/react';
+// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import Footer from './Footer';
+import Header from './Header';
+import { Box, Flex, Image, Text } from '@chakra-ui/react';
+
 const Service = [
   {
-    img: require('../../images/learningWithBg.png'),
+    img: require('../images/learningWithBg.png'),
     id: 'e-learning',
+    route: 'learning',
   },
   {
-    img: require('../../images/editorailWithBg.png'),
+    img: require('../images/editorailWithBg.png'),
     id: 'editorial',
+    route: 'editorial',
   },
 
   {
-    img: require('../../images/tutoringWithBg.png'),
+    img: require('../images/tutoringWithBg.png'),
     id: 'tutoring',
+    route: 'tutoring',
   },
   {
-    img: require('../../images/authoringWithBg.png'),
+    img: require('../images/authoringWithBg.png'),
     id: 'authoring',
+    route: 'authoring',
   },
   {
-    img: require('../../images/alignmentWithBg.png'),
+    img: require('../images/alignmentWithBg.png'),
     id: 'alignment',
+    route: 'alignment',
   },
   {
-    img: require('../../images//translationWithBg.png'),
+    img: require('../images//translationWithBg.png'),
     id: 'translation',
+    route: 'translation',
   },
 ];
 
 const Services = () => {
-  //   const scrollRef = useRef(null);
+  const navigate = useNavigate();
+  const handleClick = (service) =>{
+    navigate(`/services/${service}`)
+    console.log("clciked", service)
+  }
   return (
     <Box background="linear-gradient( to left, rgba(131, 101, 142, 0.32) 10%, white 80%)">
       <Header />
@@ -64,7 +67,7 @@ const Services = () => {
             marginY={10}
             width={{ xl: 360, lg: 320, md: 370 }}
             height={{ xl: 300, lg: 240 }}
-            src={require('../../images/girlWithBooks.png')}
+            src={require('../images/girlWithBooks.png')}
           />
         </Box>
         <Flex
@@ -86,7 +89,7 @@ const Services = () => {
                   });
                 }}
                 margin={{ md: 2 }}
-                marginBottom={{base:10}}
+                marginBottom={{ base: 10 }}
                 key={index}
                 width={{ xl: 150, lg: 150, md: 120 }}
                 height={{ xl: 190, lg: 190, md: 160 }}
@@ -141,7 +144,7 @@ const Services = () => {
           <Image
             width={220}
             height={230}
-            src={require('../../images/learnCustomImage.png')}
+            src={require('../images/learnCustomImage.png')}
           />
         </Flex>
         <Image
@@ -149,9 +152,11 @@ const Services = () => {
           width={170}
           marginLeft={'28%'}
           marginTop={{ base: 5 }}
-          src={require('../../images/learMoreBtn (1).png')}
+          src={require('../images/learMoreBtn (1).png')}
           cursor={'pointer'}
+          onClick={() => handleClick("learning")}
         />
+      
       </Box>
       <Box
         paddingY={9}
@@ -182,7 +187,7 @@ const Services = () => {
           <Image
             marginTop={-20}
             height={300}
-            src={require('../../images/editorialServicesImg.png')}
+            src={require('../images/editorialServicesImg.png')}
           />
           <Box>
             <Text fontSize={18} textAlign={'left'} fontFamily={'arvo-regular'}>
@@ -201,8 +206,9 @@ const Services = () => {
           width={170}
           marginLeft={{ xl: '58%', lg: '59%', md: '58%', base: '29%' }}
           marginTop={{ base: 5 }}
-          src={require('../../images/learMoreBtn (1).png')}
+          src={require('../images/learMoreBtn (1).png')}
           cursor={'pointer'}
+          onClick={() => handleClick('editorial')}
         />
       </Box>
       <Box padding={5} background={'rgba(212,203,220,255)'} id="tutoring">
@@ -243,7 +249,7 @@ const Services = () => {
           <Image
             width={220}
             height={230}
-            src={require('../../images/tutoringImg.png')}
+            src={require('../images/tutoringImg.png')}
           />
         </Flex>
         <Image
@@ -251,8 +257,9 @@ const Services = () => {
           width={170}
           marginLeft={'20%'}
           marginTop={{ base: 5 }}
-          src={require('../../images/learMoreBtn (1).png')}
+          src={require('../images/learMoreBtn (1).png')}
           cursor={'pointer'}
+          onClick={() => handleClick("tutoring")}
         />
       </Box>
       <Box
@@ -284,7 +291,7 @@ const Services = () => {
           <Image
             marginTop={-20}
             height={300}
-            src={require('../../images/authoringImg.png')}
+            src={require('../images/authoringImg.png')}
           />
           <Box>
             <Text fontSize={18} textAlign={'left'} fontFamily={'arvo-regular'}>
@@ -303,8 +310,9 @@ const Services = () => {
           width={170}
           marginLeft={{ xl: '58%', lg: '59%', md: '58%', base: '29%' }}
           marginTop={{ base: 5 }}
-          src={require('../../images/learMoreBtn (1).png')}
+          src={require('../images/learMoreBtn (1).png')}
           cursor={'pointer'}
+          onClick={() => handleClick("authoring")}
         />
       </Box>
       <Box padding={5} background={'rgba(212,203,220,255)'} id="alignment">
@@ -346,7 +354,7 @@ const Services = () => {
           <Image
             width={220}
             height={230}
-            src={require('../../images/alignmentImg.png')}
+            src={require('../images/alignmentImg.png')}
           />
         </Flex>
         <Image
@@ -354,8 +362,9 @@ const Services = () => {
           width={170}
           marginLeft={'20%'}
           marginTop={{ base: 5 }}
-          src={require('../../images/learMoreBtn (1).png')}
+          src={require('../images/learMoreBtn (1).png')}
           cursor={'pointer'}
+          onClick={() => handleClick("alignment")}
         />
       </Box>
       <Box
@@ -387,7 +396,7 @@ const Services = () => {
           <Image
             marginTop={-20}
             height={300}
-            src={require('../../images/translationImg.png')}
+            src={require('../images/translationImg.png')}
           />
           <Box>
             <Text fontSize={18} textAlign={'left'} fontFamily={'arvo-regular'}>
@@ -406,8 +415,9 @@ const Services = () => {
           width={170}
           marginLeft={{ xl: '58%', lg: '59%', md: '58%', base: '29%' }}
           marginTop={{ base: 5 }}
-          src={require('../../images/learMoreBtn (1).png')}
+          src={require('../images/learMoreBtn (1).png')}
           cursor={'pointer'}
+          onClick={() => handleClick("translation")}
         />
       </Box>
       <Box
@@ -433,14 +443,14 @@ const Services = () => {
               marginY={10}
               height={58}
               cursor={'pointer'}
-              src={require('../../images/letsConnectBlue.png')}
+              src={require('../images/letsConnectBlue.png')}
             />
           </Box>
           <Image
             display={{ xl: 'block', base: 'none' }}
             height={410}
             width={530}
-            src={require('../../images/handShake.png')}
+            src={require('../images/handShake.png')}
           />
         </Flex>
       </Box>

@@ -1,30 +1,19 @@
 import {
   Box,
-  Center,
-  color,
   Flex,
   Grid,
-  Heading,
   Image,
   Text,
- useBreakpointValue 
 } from '@chakra-ui/react';
-import { useNavigate } from "react-router-dom";
-import Header from '../header/Header';
-import Footer from '../footer/Footer';
+import Header from './Header';
+import Footer from './Footer';
 
 
-const breakpoints = {
-  sm: '30em', // 480px
-  md: '48em', // 768px
-  lg: '62em', // 992px
-  xl: '80em', // 1280px
-};
 
 const Services = [
   {
     title: 'E-Learning Customization',
-    image: require('../../images/eLearn (1).png'),
+    image: require('../images/eLearn (1).png'),
     color: '#BAFFB19E',
     tilt: '8.11deg',
     height: '100',
@@ -32,7 +21,7 @@ const Services = [
   },
   {
     title: 'Tutoring',
-    image: require('../../images/tutor.png'),
+    image: require('../images/tutor.png'),
     color: '#FEFFA7B2',
     tilt: '-7.58deg',
     height: '87',
@@ -40,7 +29,7 @@ const Services = [
   },
   {
     title: 'Alignment',
-    image: require('../../images/alignment.png'),
+    image: require('../images/alignment.png'),
     color: '#D7E8F5B2',
     tilt: '-7.24deg',
     height: '78',
@@ -49,7 +38,7 @@ const Services = [
   },
   {
     title: 'Editorial',
-    image: require('../../images/editorial.png'),
+    image: require('../images/editorial.png'),
     color: '#D6EBF9D4',
     tilt: '-9.14deg',
     height: '70',
@@ -57,7 +46,7 @@ const Services = [
   },
   {
     title: 'Authoring',
-    image: require('../../images/authoring.png'),
+    image: require('../images/authoring.png'),
     color: '#FFC7C7B2',
     tilt: '10.93deg',
     height: '87',
@@ -65,7 +54,7 @@ const Services = [
   },
   {
     title: 'Translation',
-    image: require('../../images/translation.png'),
+    image: require('../images/translation.png'),
     color: '#FBDC87',
     tilt: '11.55deg',
     height: '100px',
@@ -89,49 +78,49 @@ const Determination = [
 
 const Partners = [
   {
-    image: require('../../images/brainlyLogo.png'),
+    image: require('../images/brainlyLogo.png'),
   },
   {
-    image: require('../../images/cheggLogo.png'),
+    image: require('../images/cheggLogo.png'),
   },
   {
-    image: require('../../images/hurixLogo.png'),
+    image: require('../images/hurixLogo.png'),
   },
   {
-    image: require('../../images/byjuLogo.png'),
+    image: require('../images/byjuLogo.png'),
   },
   {
-    image: require('../../images/carnegLogo.png'),
+    image: require('../images/carnegLogo.png'),
   },
   {
-    image: require('../../images/bankLogo.png'),
+    image: require('../images/bankLogo.png'),
   },
   {
-    image: require('../../images/enotesLogo.png'),
+    image: require('../images/enotesLogo.png'),
   },
   {
-    image: require('../../images/bartleLogo.png'),
+    image: require('../images/bartleLogo.png'),
   },
   {
-    image: require('../../images/learnLogo.png'),
+    image: require('../images/learnLogo.png'),
   },
   {
-    image: require('../../images/vedantuLogo (1).png'),
+    image: require('../images/vedantuLogo (1).png'),
   },
   {
-    image: require('../../images/wileylogo.png'),
+    image: require('../images/wileylogo.png'),
   },
   {
-    image: require('../../images/khanLogo.png'),
+    image: require('../images/khanLogo.png'),
   },
   {
-    image: require('../../images/embibeLogo.png'),
+    image: require('../images/embibeLogo.png'),
   },
   {
-    image: require('../../images/digitalLogo.png'),
+    image: require('../images/digitalLogo.png'),
   },
   {
-    image: require('../../images/amazonLogo.png'),
+    image: require('../images/amazonLogo.png'),
   },
 ];
 
@@ -185,16 +174,16 @@ const Home = () => {
               resize={'contain'}
               width={330}
               height={300}
-              src={require('../../images/homeLogo.png')}
+              src={require('../images/homeLogo.png')}
             />
           </Box>
         </Flex>
         <Box>
           <Image
-            src={require('../../images/Group 331.png')}
+            src={require('../images/Group 331.png')}
             marginTop={150}
             width={250}
-            height={10}
+            height={12}
             // resize={'contain'}
           />
         </Box>
@@ -270,9 +259,9 @@ const Home = () => {
             right={0}
             bottom={{ lg: 10 }}
             justifyContent={'right'}
-            src={require('../../images/Group 148.png')}
+            src={require('../images/Group 148.png')}
             width={250}
-            height={10}
+            height={12}
           />
         </Box>
       </Box>
@@ -328,7 +317,7 @@ const Home = () => {
                   marginX={2}
                   backgroundRepeat={'no-repeat'}
                   backgroundSize={'contain'}
-                  backgroundImage={require('../../images/purpleBg.png')}
+                  backgroundImage={require('../images/purpleBg.png')}
                   fontFamily={'libreFranklin'}
                   fontSize={10}
                   fontWeight={700}
@@ -343,7 +332,7 @@ const Home = () => {
                     width={{xl:245, lg: 235, base: 180 }}
                     height={{xl:200, base: 160, md:200, sm:160}}
                     // margin={{md:10}}
-                    marginBottom={{base:12,xl:10,lg:12, md:1}}
+                    marginBottom={{base:2,xl:10,lg:12, md:1}}
                     // margin={10}
                     rounded={'50'}
                     position={'absolute'}
@@ -394,34 +383,35 @@ const Home = () => {
         >
           Our Determination is our Pride{' '}
         </Text>
-        <Flex padding={1.5} flexWrap={'wrap'} pb={20}>
+        <Flex padding={1.5} flexWrap={'wrap'} pb={20} gap={6} justifyContent={"center"}>
           {Determination.map((item, index) => {
             return (
               <Box position={'relative'}>
                 <Image
                   key={index}
                   margin={{ lg: 10, md:10 }}
-                  marginX={{md:'21%', lg:'35%'}}
-                  height={{xl:400,md:500, base:400,lg:600}}
+                  height={{xl:400,md:600, base:400,lg:600}}
                   width={{ xl: 400, base: 600,lg:600}}
-                  src={require('../../images/bgFrame.png')}
+                  src={require('../images/bgFrame.png')}
                 />
                 <Box
                   position="absolute"
                   top = {{base:'20%', md:'22%'}}
-                  left={{ xl:'25%',lg:'28%', base: '20%', md:'42%'}}
                   backdropFilter={10}
                   fontWeight={600}
-                  // textAlign={'center'}
-                  // width={300}
-                  // backdrop-filter: blur(10px);
+                  alignItems={"center"}
+                  justifyContent={"center"}
+                  width={"100%"}
+                  display={"flex"}
+                  flexDirection={"column"}
                 >
                   <Text
                     fontSize={{ xl: 20, base: 16, md:32 }}
                     marginTop={{ xl: 8, base: 3 }}
-                    marginLeft={{lg:109}}
+                    // marginLeft={{lg:109}}
                     fontWeight={800}
                     textAlign={'center'}
+                    
                     // marginLeft={{lg:'72%'}}
                     fontFamily={'Abhaya Libre ExtraBold'}
                     color={'#B72323'}
@@ -431,9 +421,11 @@ const Home = () => {
                   <Text
                     fontSize={{xl:13,base:13, md:20}}
                     // fontSize={12}
-                    padding={2}
-                    width={{ xl: 250,lg:400, base: 250, md:400 }}
-                    marginLeft={{lg:150, xl:130}}
+                    padding={2} 
+                    width={{lg:"50%", base:"55%"}}
+                    // width={{ xl: 250,lg:400, base: 250, md:400 }}
+                    
+                    // marginLeft={{lg:"50%", xl:130}}
                     textAlign={'left'}
                     fontFamily={'marmelad-regular'}
                   >
@@ -524,7 +516,7 @@ const Home = () => {
               width={{xl:400,lg:350, md:280}}
               display={{xl:'block', lg:'block', md:'block', base:'none'}}
               // border={1}
-              src={require('../../images/contact.png')}
+              src={require('../images/contact.png')}
             />
 
             <Box>
@@ -557,7 +549,7 @@ const Home = () => {
                 width={{ xl: 197 }}
                 marginY={{ base: 5 }}
                 marginX={{ base: 'auto' }}
-                src={require('../../images/connect.png')}
+                src={require('../images/connect.png')}
               />
             </Box>
           </Flex>
@@ -569,7 +561,7 @@ const Home = () => {
             height={800}
             position={'absolute'}
             display={{ xl: 'Block', base: 'none' }}
-            src={require('../../images/girl.png')}
+            src={require('../images/girl.png')}
           />
         </Box>
       </Box>

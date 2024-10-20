@@ -1,41 +1,36 @@
-import { pointer } from '@testing-library/user-event/dist/cjs/pointer/index.js';
-import Footer from '../footer/Footer';
-import Header from '../header/Header';
+// import { pointer } from '@testing-library/user-event/dist/cjs/pointer/index.js';
+import Footer from './Footer';
+import Header from './Header';
 import {
   Box,
-  Center,
-  color,
   Flex,
-  Grid,
-  Heading,
   Image,
   Text,
-  useBreakpointValue,
 } from '@chakra-ui/react';
 const frames = [
   {
     title: 'Budget Friendly',
-    img: require('../../images/budgetFriendly.png'),
+    img: require('../images/budgetFriendly.png'),
   },
   {
     title: 'Feedback',
-    img: require('../../images/feedback.png'),
+    img: require('../images/feedback.png'),
   },
   {
     title: 'Implementation',
-    img: require('../../images/feedback.png'),
+    img: require('../images/feedback.png'),
   },
   {
     title: 'Empowered Employ',
-    img: require('../../images/empoweredEmploy.png'),
+    img: require('../images/empoweredEmploy.png'),
   },
   {
     title: 'Client-Centric',
-    img: require('../../images/clientCentric.png'),
+    img: require('../images/clientCentric.png'),
   },
   {
     title: 'Integrity',
-    img: require('../../images/integrity.png'),
+    img: require('../images/integrity.png'),
   },
 ];
 
@@ -43,39 +38,39 @@ const weDo = [
   {
     title: 'We Aspire ',
     text: 'We aspire to be a transformative force in the educational technology landscape, continuously pushing the boundaries of innovation to enhance learning experiences globally. Through our relentless pursuit of innovation, we aspire to make a lasting impact on education, inspiring learners and educators.',
-    frame: require('../../images/scrapedBlueFrame.png'),
+    frame: require('../images/scrapedBlueFrame.png'),
   },
   {
     title: 'We Embrace Inclusivity',
     text: 'Our team actively works to identify and address barriers to education, incorporating feedback from a wide range of users to continually improve and tailor our offerings. At Vidyaa Tech, embracing inclusivity means championing educational equity and striving to make a meaningful impact in the lives of learners and educators around the world.',
-    frame: require('../../images/scrapedYellowFrame.png'),
+    frame: require('../images/scrapedYellowFrame.png'),
   },
   {
     title: 'We Adhere',
     text: 'We adhere to the highest standards of excellence in every aspect of our service, from support to timely delivery. We adhere to rigorous timelines in our project management and delivery processes. We implement thorough planning and quality control measures throughout the development and deployment stages.',
-    frame: require('../../images/scrapedYellowFrame.png'),
+    frame: require('../images/scrapedYellowFrame.png'),
   },
   {
     title: 'We Support',
     text: 'By fostering a supportive and collaborative environment, we aim to build lasting relationships and contribute to the overall success and satisfaction of our clients. Vidyaa Tech aims to foster a positive and productive experience for all learners, reinforcing our commitment to excellence and client satisfaction in every aspect of our service.',
-    frame: require('../../images/scrapedBlueFrame.png'),
+    frame: require('../images/scrapedBlueFrame.png'),
   },
 ];
 const team = [
   {
     name: 'Mr. Ankkit Parmar',
     title: ' Ceo & Founder',
-    img: require('../../images/ankitParmar.png'),
+    img: require('../images/ankitParmar.png'),
   },
   {
     name: 'Mr. Siddhant Dwivedi',
     title: ' Head of Operations',
-    img: require('../../images/siddhartD.png'),
+    img: require('../images/siddhartD.png'),
   },
   {
     name: 'Mr. Akash Agarwal',
     title: 'Head of Quality',
-    img: require('../../images/AkashA.png'),
+    img: require('../images/AkashA.png'),
   },
 ];
 const About = () => {
@@ -102,7 +97,12 @@ const About = () => {
         >
           About
         </Text>
-        <Text fontFamily={'arvo-regular'} fontWeight={700} fontSize={20} marginX={'7%'}>
+        <Text
+          fontFamily={'arvo-regular'}
+          fontWeight={700}
+          fontSize={20}
+          marginX={'7%'}
+        >
           <Text margin={3}>
             <Text color={'#D64751'} fontWeight={700} fontSize={20} as={'span'}>
               Vidyaa Tech
@@ -135,7 +135,7 @@ const About = () => {
         </Text>
         <Box display="flex" justifyContent="right" paddingY={5}>
           <Image
-            src={require('../../images/Group 148.png')}
+            src={require('../images/Group 148.png')}
             alt="Description" // Always add alt text for accessibility
             width={250} // Adjust width as needed
             height={'auto'} // Maintain aspect ratio
@@ -186,7 +186,7 @@ const About = () => {
               position={'relative'}
               top={'20%'}
               right={'5%'}
-              src={require('../../images/redGirl.png')}
+              src={require('../images/redGirl.png')}
             />
           </Box>
         </Flex>
@@ -205,7 +205,7 @@ const About = () => {
               margin={5}
               height={830}
               display={{ xl: 'block', base: 'none' }}
-              src={require('../../images/girlWithPage.png')}
+              src={require('../images/girlWithPage.png')}
             />
           </Box>
           <Flex marginY={9} flexWrap={'wrap'} justifyContent={'space-around'}>
@@ -246,15 +246,20 @@ const About = () => {
           </Flex>
         </Flex>
       </Box>
-      <Box>
-        <Image
-          paddingX={{ xl: 20 }}
-          alignItems={'center'}
-          width={'80%'}
-          marginX={'auto'}
-          marginY={10}
-          src={require('../../images/deliverGraph.png')}
-        />
+      <Box borderWidth={1} overflowX={"auto"}>
+        <Box
+          width={2000}
+        >
+          <Image
+            paddingX={{ xl: 20 }}
+            alignItems={'center'}
+            width={'80%'} 
+            // height={100}
+            marginX={'auto'}
+            marginY={10}
+            src={require('../images/deliverGraph.png')}
+          />
+        </Box>
       </Box>
       <Box
         background={
@@ -269,16 +274,25 @@ const About = () => {
           textAlign={'center'}
           fontWeight={800}
           fontSize={38}
-          color={{xl:'#F2F2F9', lg:'#F2F2F9', md:'black'}}
+          color={{ xl: '#F2F2F9', lg: '#F2F2F9', md: 'black' }}
           fontFamily={'Abhaya Libre ExtraBold'}
         >
           Meet Our Team!
         </Text>
-        <Flex marginX={{xl:20, md:10}} flexDirection={{xl:'row',md:'column', base:'column'}}  justifyContent={'space-between'}>
+        <Flex
+          marginX={{ xl: 20, md: 10 }}
+          flexDirection={{ xl: 'row', md: 'column', base: 'column' }}
+          justifyContent={'space-between'}
+        >
           {team.map((item, index) => {
             return (
               <Box margin={2} key={index}>
-                <Image margin={{md:'auto', base:'auto'}} height={315} width={330} src={item.img} />
+                <Image
+                  margin={{ md: 'auto', base: 'auto' }}
+                  height={315}
+                  width={330}
+                  src={item.img}
+                />
                 <Text
                   textAlign={'center'}
                   margin={5}
@@ -298,8 +312,8 @@ const About = () => {
             cursor={'pointer'}
             margin={10}
             height={20}
-            width={{xl:280, lg:260, md:200}}
-            src={require('../../images/connectWithUs.png')}
+            width={{ xl: 280, lg: 260, md: 200 }}
+            src={require('../images/connectWithUs.png')}
           />
         </Flex>
       </Box>

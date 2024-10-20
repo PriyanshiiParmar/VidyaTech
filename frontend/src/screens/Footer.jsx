@@ -1,13 +1,8 @@
 import {
     Box,
-    Center,
-    color,
     Flex,
-    Grid,
-    Heading,
     Image,
     Text,
-   useBreakpointValue 
   } from '@chakra-ui/react';
 const Footer = ()=>{
     return(
@@ -21,7 +16,7 @@ const Footer = ()=>{
           marginY={{ base: 3 }}
           width={{ xl: 240, base: 40 }}
           height={{ xl: 100, base: 10 }}
-          src={require('../../images/vidyaLogo.png')}
+          src={require('../images/vidyaLogo.png')}
         />
         <Flex
           flexDirection={{ xl: 'row', md:'row', lg:'row', base: 'column' }}
@@ -84,7 +79,7 @@ const Footer = ()=>{
                 marginRight={{xl:5, base:2}}
                 height={19}
                 width={30}
-                src={require('../../images/telephone.png')}
+                src={require('../images/telephone.png')}
               />
               <Text as="span">+91731-4985066</Text>
             </Flex>
@@ -99,7 +94,7 @@ const Footer = ()=>{
                 marginRight={5}
                 height={15}
                 width={25}
-                src={require('../../images/msg.png')}
+                src={require('../images/msg.png')}
               />
               <Text as="span">info@vidyaa-tech.com</Text>
             </Flex>
@@ -120,7 +115,7 @@ const Footer = ()=>{
                 marginRight={{xl:5}}
                 height={{xl:29, base:5}}
                 width={7}
-                src={require('../../images/location.png')}
+                src={require('../images/location.png')}
               />
               <Text>S-4 Agrawals, 4th floor India</Text>
             </Flex>
@@ -150,7 +145,7 @@ const Footer = ()=>{
           <Image
             cursor={'pointer'}
             height={{xl:23, base:5}}
-            src={require('../../images/socialMedia.png')}
+            src={require('../images/socialMedia.png')}
           />
         </Box>
       </Flex>

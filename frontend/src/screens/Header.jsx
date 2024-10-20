@@ -1,13 +1,8 @@
 import {
     Box,
-    Center,
-    color,
     Flex,
-    Grid,
-    Heading,
     Image,
     Text,
-   useBreakpointValue 
   } from '@chakra-ui/react';
   import { useNavigate } from "react-router-dom";
 const Screens = [
@@ -32,7 +27,7 @@ const Header = () => {
         background="linear-gradient( to left, rgba(131, 101, 142, 0.32) 10%, white 80%)"
       >
         <Image
-          src={require('../../images/vidyaLogo.png')}
+          src={require('../images/vidyaLogo.png')}
           margin={5}
           // resize={'contain'}
           width={150}
